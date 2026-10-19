@@ -2,9 +2,9 @@ export const BUSINESS = {
   name: 'Taller de Carrocería y Pintura',
   description:
     'Taller de carrocería, pintura automotriz, pulido, cerámica, restauración de faros y detallado en Nogales, Sonora. Cotiza por WhatsApp enviando fotos de tu vehículo.',
-  website: 'https://www.carroceriaypintura.com',
+  website: 'https://carroceriaypintura.com',
   phone: '+526311322616',
-  image: 'https://www.carroceriaypintura.com/images/work-gmc.jpg',
+  image: 'https://carroceriaypintura.com/images/work-gmc.jpg',
   address: {
     street: 'José Zazueta #16',
     colony: 'Col. Los Encinos',

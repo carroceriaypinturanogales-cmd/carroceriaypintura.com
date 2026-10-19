@@ -7,7 +7,10 @@ import { Services } from '@/components/services'
 import { FinalCta, FloatingWhatsApp, SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 import { Works } from '@/components/works'
+import { pageMetadata } from '@/lib/metadata'
 import { BUSINESS } from '@/lib/seo-constants'
+
+export const metadata = pageMetadata({ path: '/', type: 'website' })
 
 const jsonLd = {
   '@context': 'https://schema.org',
