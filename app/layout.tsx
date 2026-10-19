@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { Barlow, Barlow_Condensed } from 'next/font/google'
 import './globals.css'
+import { pageMetadata, SITE_URL } from '@/lib/metadata'
 
 const FB_APP_ID = '1133529849209619'
 const FB_VERSION = 'v26.0'
@@ -18,43 +19,9 @@ const barlowCondensed = Barlow_Condensed({
   variable: '--font-barlow-condensed',
 })
 
-const SITE_URL = 'https://www.carroceriaypintura.com'
-const SHARE_IMAGE = 'https://www.carroceriaypintura.com/images/work-gmc.jpg'
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Taller de Carrocería y Pintura | Nogales, Sonora',
-  description:
-    'Taller de carrocería, pintura automotriz, pulido, cerámica, restauración de faros y detallado en Nogales, Sonora. Cotiza por WhatsApp enviando fotos de tu vehículo al 631 132 2616.',
-  alternates: {
-    canonical: `${SITE_URL}/`,
-  },
-  openGraph: {
-    title: 'Taller de Carrocería y Pintura en Nogales, Sonora',
-    description:
-      'Reparación de carrocería, pintura automotriz, pulido, cerámica y detallado en Nogales, Sonora. Cotiza por WhatsApp al 631 132 2616.',
-    url: `${SITE_URL}/`,
-    siteName: 'Taller de Carrocería y Pintura',
-    images: [
-      {
-        url: SHARE_IMAGE,
-        width: 1200,
-        height: 630,
-        type: 'image/jpeg',
-        alt: 'Taller de Carrocería y Pintura en Nogales, Sonora',
-      },
-    ],
-    locale: 'es_MX',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Taller de Carrocería y Pintura en Nogales, Sonora',
-    description:
-      'Carrocería, pintura, pulido y restauración automotriz en Nogales, Sonora.',
-    images: [SHARE_IMAGE],
-    site: '@Carroceria_Nog',
-  },
+  ...pageMetadata(),
   icons: {
     icon: [
       { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
